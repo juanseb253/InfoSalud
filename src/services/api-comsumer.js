@@ -13,7 +13,8 @@ export const simpleConsult = (message, handleClick, setMessage) => {
       )
         .then((response) => response.json())
         .then((data) => {
-            handleClick((prev) => [...prev, { text: data, class: "bot" }]);
+            console.log(data);
+            handleClick((prev) => [...prev, { text: data?.result, class: "bot" }]);
             setMessage("");
         });
 }
