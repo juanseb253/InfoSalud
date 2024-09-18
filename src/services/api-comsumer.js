@@ -1,5 +1,5 @@
 export const simpleConsult = (message, handleClick, setMessage) => {
-    return await fetch(
+    return fetch(
         "https://fastapi-infosaludemergente-production.up.railway.app/process_single",
         {
           method: "POST",
