@@ -1,0 +1,22 @@
+nav {
+  background-color: #003cff;
+  background-image: linear-gradient(177deg, #003cff, #00eeff);
+  height: 6vh;
+  min-height: 58px;
+  width: 100vw;
+  margin-bottom: 10px;
+}
+.container-align-vertical {
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25px;
+  padding: 7px 0;
+}
+.left-container-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}

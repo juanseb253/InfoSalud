@@ -1,0 +1,19 @@
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  height: 100%;
+}
+.button-white:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Brillo dentro del botón */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+.button-black {
+  margin: 0 5px;
+}
+.button-black:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Brillo dentro del botón */
+  border-radius: 20px;
+}

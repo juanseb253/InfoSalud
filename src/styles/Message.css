@@ -1,0 +1,20 @@
+.chat-message {
+  max-width: 60%;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  margin: 7px 0px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+.user {
+  background: linear-gradient(#003cff, #00a4ff);
+  color: white;
+  border-radius: 10px 10px 0 10px;
+  align-self: flex-end;
+  margin-right: 10px;
+}
+.bot {
+  background-color: rgba(231, 231, 231, 0.87);
+  border-radius: 10px 10px 10px 0;
+  margin-left: 10px;
+  align-self: flex-start;
+}
