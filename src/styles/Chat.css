@@ -1,7 +1,7 @@
 .container-chat {
   height: 90vh;
   width: 50%;
-  min-width: 405px;
+  min-width: 305px;
   margin: 10px auto 0 auto;
   background-image: url("../assets/logo.svg");
   background-repeat: no-repeat;
