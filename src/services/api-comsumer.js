@@ -1,4 +1,6 @@
-export const simpleConsult = (message, handleClick, setMessage) => {
+export const simpleConsult = (message, handleClick, videoNumber, setMessage) => {
+    setMessage("");
+    if (videoNumber === null){
     return fetch(
         "https://fastapi-infosaludemergente-production.up.railway.app/process_single",
         {
@@ -15,6 +17,28 @@ export const simpleConsult = (message, handleClick, setMessage) => {
         .then((data) => {
             console.log(data);
             handleClick((prev) => [...prev, { text: data?.result, class: "bot" }]);
-            setMessage("");
+            
         });
+      }
+      else {
+          return fetch(
+            "https://fastapi-infosaludemergente-production.up.railway.app/process_double",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                param2: message,
+                param1: videoNumber
+              }),
+            }
+          )
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                handleClick((prev) => [...prev, { text: data?.result, class: "bot" }]);
+                
+            });
+      }
 }

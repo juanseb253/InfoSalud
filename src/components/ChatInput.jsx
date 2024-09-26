@@ -10,26 +10,27 @@ import Send2 from "../assets/send2.svg";
 
 import "../styles/ChatInput.css";
 
-const ChatInput = ({ handleClick }) => {
+const ChatInput = ({ handleClick, clickContext, videoNumber }) => {
   const [message, setMessage] = useState("");
   const handleChange = (e) => {
     setMessage(e.target.value);
   };
   const handleSend = () => {
     handleClick((prev) => [...prev, { text: message, class: "user" }]);
-    simpleConsult(message, handleClick, setMessage);
-    // handleClick((prev) => [
-    //   ...prev,
-    //   {
-    //     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic odio nihil officia dolores! Quis atque quam quia? Fugit incidunt, distinctio blanditiis omnis veniam minima rem inventore sequi quod, porro voluptatum?",
-    //     class: "bot",
-    //   },
-    // ]);
+    simpleConsult(message, handleClick, videoNumber, setMessage);
+  };
+  const onEnter = (e) => {
+    if (e.key === "Enter") {
+      handleSend();
+    }
   };
   return (
     <div className="chat-input-container">
       <div className="center-vertical">
-        <Button className="button-black">
+        <Button
+          className="button-black"
+          onClick={() => clickContext((prev) => !prev)}
+        >
           <img src={Docs} alt="" />
         </Button>
         <input
@@ -37,6 +38,7 @@ const ChatInput = ({ handleClick }) => {
           placeholder="Ingrese una consulta"
           value={message}
           onChange={(e) => handleChange(e)}
+          onKeyDown={onEnter}
         />
         <Button className="container-send" onClick={handleSend}>
           <img className="no-hover-icon send-icon" src={Send} alt="" />

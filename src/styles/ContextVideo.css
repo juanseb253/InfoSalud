@@ -1,0 +1,27 @@
+.flotante {
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+a {
+  display: inline-block;
+}
+.sep-url {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.context {
+  background-color: #003cff;
+  background-image: linear-gradient(177deg, #003cff, #00eeff);
+  color: #fff;
+}
